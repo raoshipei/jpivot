@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Schema name="tezz2">
+	<!--<Dimension type="StandardDimension" name="区县" >
+		<Hierarchy allMemberName="所有区县" hasAll="true"   primaryKey="county_id" >
+			<Table name="base_area_for_diggle" schema="multivalued"></Table>
+			<Level name="county_id" column="county_id" nameColumn="county_name" uniqueMembers="true" type="String"   />
+
+		</Hierarchy>
+	</Dimension>-->
+	<Cube name="register" enabled="true">
+		<!-- 事实表(fact table) -->
+		<Table name="par_user" />
+
+		<Dimension name="学生性别" foreignKey="gender" >
+			<Hierarchy hasAll="true" allMemberName="所有性别" primaryKey="gender" >
+				<Table name="base_gender"></Table>
+				<Level name="gender" column="gender" nameColumn="gender_name"  />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生姓名">
+			<Hierarchy hasAll="true" allMemberName="学生姓名" primaryKey="id">
+				<Table name="par_user"></Table>
+				<Level name="name" column="name"/>
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生类型" foreignKey="special_type">
+			<Hierarchy hasAll="true" allMemberName="所有学生类型" primaryKey="special_type" >
+				<Table name="student_type" />
+				<Level name="special_type" column="special_type"
+					   nameColumn="special_name" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="政策优抚类型" foreignKey="policy_type">
+			<Hierarchy hasAll="true" allMemberName="所有优抚类型" primaryKey="policy_type">
+				<Table name="student_policy_type"></Table>
+				<Level name="policy_type" column="policy_type"
+					   nameColumn="policy_name"  />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生民族" foreignKey="ethnic">
+			<Hierarchy hasAll="true" allMemberName="所有民族" primaryKey="ethnic" >
+				<Table name="base_ethnic_for_diggle"></Table>
+				<Level name="ethnic" column="ethnic"
+					   nameColumn="ethnic_name"  />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生户籍类型" foreignKey="choose_hj_type">
+			<Hierarchy hasAll="true" allMemberName="所有户籍类型" primaryKey="choose_hj_type" >
+				<Table name="hj_type"></Table>
+				<Level name="choose_hj_type" column="choose_hj_type"
+					   nameColumn="hj_name"  />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="报名区县" foreignKey="choose_county_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="county_id">
+
+				<Table name="base_area_for_diggle" />
+				<Level name="county_id" column="county_id" nameColumn="county_name"></Level>
+				<!--<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />-->
+			</Hierarchy>
+
+		</Dimension>
+		<Dimension name="录取区县" foreignKey="choose_county_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="county_id">
+
+				<Table name="base_area_for_diggle" />
+				<Level name="county_id" column="county_id" nameColumn="county_name"></Level>
+				<!--<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />-->
+			</Hierarchy>
+
+		</Dimension>
+
+		<!--<Dimension name="录取学校" foreignKey="id">
+			<Hierarchy hasAll="true" allMemberName="所有录取学校" primaryKey="par_user_id" primaryKeyTable="par_user_enroll">
+
+				<join leftKey="school_id" rightKey="school_id" >
+					<Table name="par_user_enroll" />
+					<Table name="base_school_for_dig"></Table>
+				</join>
+				<Level name="school_id" column="school_id"
+					   nameColumn="gender_name" uniqueMembers="true" table="base_school_for_dig" />
+			</Hierarchy>
+
+		</Dimension>-->
+		<!--<DimensionUsage source="区县" name="区县" foreignKey="choose_county_id"/>-->
+		<Measure name="报名人数" column="choose_county_id" aggregator="count"  />
+		<!--<Measure name="区县" column="education_id" aggregator="count"  />
+		<Measure name="年级" column="grade_id" aggregator="count"  />
+		<Measure name="户籍" column="type" aggregator="count"  />-->
+		<!--<Measure name="录取数" column="type" aggregator="count"  />-->
+
+
+	</Cube>
+
+
+
+	<Cube name="enroll" enabled="true">
+		<!-- 事实表(fact table) -->
+		<Table name="par_user_enroll" />
+		<!-- 学生维 -->
+		<Dimension name="学生性别" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="所有性别" primaryKey="id" primaryKeyTable="par_user">
+				<join leftKey="gender" rightKey="gender">
+					<Table name="par_user" />
+					<Table name="base_gender"></Table>
+				</join>
+				<Level name="gender" column="gender"
+					   nameColumn="gender_name" uniqueMembers="true" table="base_gender" />
+
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="学生姓名" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="学生姓名" primaryKey="id">
+				<Table name="par_user"></Table>
+				<Level name="name" column="name"/>
+
+			</Hierarchy>
+		</Dimension>
+		<Dimension name="学生民族" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="所有民族" primaryKey="id" primaryKeyTable="par_user">
+				<join leftKey="ethnic" rightKey="ethnic">
+					<Table name="par_user" />
+					<Table name="base_ethnic_for_diggle"></Table>
+				</join>
+				<Level name="ethnic" column="ethnic"
+					   nameColumn="ethnic_name" uniqueMembers="true" table="base_ethnic_for_diggle" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生类型" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="所有学生类型" primaryKey="id" primaryKeyTable="par_user">
+				<join leftKey="special_type" rightKey="special_type">
+					<Table name="par_user" />
+					<Table name="student_type"></Table>
+				</join>
+				<Level name="special_type" column="special_type"
+					   nameColumn="special_name" uniqueMembers="true" table="student_type" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="政策优抚类型" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="所有优抚类型" primaryKey="id" primaryKeyTable="par_user">
+				<join leftKey="policy_type" rightKey="policy_type">
+					<Table name="par_user" />
+					<Table name="student_policy_type"></Table>
+				</join>
+				<Level name="policy_type" column="policy_type"
+					   nameColumn="policy_name" uniqueMembers="true" table="student_policy_type" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学生户籍类型" foreignKey="par_user_id">
+			<Hierarchy hasAll="true" allMemberName="所有户籍类型" primaryKey="id" primaryKeyTable="par_user">
+				<join leftKey="choose_hj_type" rightKey="choose_hj_type">
+					<Table name="par_user" />
+					<Table name="hj_type"></Table>
+				</join>
+				<Level name="choose_hj_type" column="choose_hj_type"
+					   nameColumn="hj_name" uniqueMembers="true" table="hj_type" />
+
+			</Hierarchy>
+		</Dimension>
+		<!-- 学校类别维 -->
+		<Dimension name="学校性质" foreignKey="school_id">
+			<Hierarchy hasAll="true" allMemberName="所有公办民办学校" primaryKey="id" primaryKeyTable="base_school" >
+				<join leftKey="type" rightKey="type">
+					<Table name="base_school" />
+					<Table name="school_nature"></Table>
+				</join>
+				<Level name="type" column="type"
+					   nameColumn="school_type_name" uniqueMembers="true" table="school_nature" />
+				<Level name="id" column="id"
+					   nameColumn="name" uniqueMembers="true" table="base_school" />
+
+			</Hierarchy>
+		</Dimension>
+
+		<Dimension name="学校级别" foreignKey="school_id">
+			<Hierarchy hasAll="true" allMemberName="所有中小学校" primaryKey="id" primaryKeyTable="base_school">
+				<join leftKey="school_type" rightKey="school_type">
+					<Table name="base_school" />
+					<Table name="school_level"></Table>
+				</join>
+				<Level name="school_type" column="school_type"
+					   nameColumn="school_type_name" uniqueMembers="true" table="school_level" />
+				<Level name="id" column="id"
+					   nameColumn="name" uniqueMembers="true" table="base_school" />
+
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="报名区县" foreignKey="education_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="county_id" >
+				<Table name="base_area_for_diggle" />
+				<Level name="county_id" column="county_id"
+					   nameColumn="county_name" uniqueMembers="true"/>
+
+			</Hierarchy>
+
+		</Dimension>
+
+		<Dimension name="录取区县" foreignKey="school_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="id" primaryKeyTable="base_school">
+				<join leftKey="county_id" rightKey="county_id">
+					<Table name="base_school" />
+					<Table name="base_area_for_diggle"></Table>
+				</join>
+				<Level name="county_id" column="county_id"
+					   nameColumn="county_name" uniqueMembers="true" table="base_area_for_diggle" />
+
+				<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />
+			</Hierarchy>
+
+		</Dimension>
+		<!--<DimensionUsage source="区县" name="区县" foreignKey="education_id"/>-->
+		<Measure name="录取人数" column="school_id"  aggregator="count"  />
+		<Measure name="报名录取人数" column="education_id"  aggregator="count"  />
+
+		<!--<Measure name="区县" column="education_id" aggregator="count"  />
+		<Measure name="年级" column="grade_id" aggregator="count"  />
+		<Measure name="户籍" column="type" aggregator="count"  />-->
+		<!--<Measure name="录取数" column="type" aggregator="count"  />-->
+
+	</Cube>
+	<Cube name="plan" enabled="true">
+		<!-- 事实表(fact table) -->
+		<Table name="base_school_for_dig" />
+		<!--<Dimension name="录取区县" foreignKey="county_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="county_id">
+				<Table name="base_area_for_diggle" />
+				<Level name="county_id" column="county_id" nameColumn="county_name"></Level>
+				&lt;!&ndash;<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />&ndash;&gt;
+			</Hierarchy>
+		</Dimension>-->
+		<Dimension name="录取区县" foreignKey="id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="id" primaryKeyTable="base_school">
+				<join leftKey="county_id" rightKey="county_id">
+					<Table name="base_school" />
+					<Table name="base_area_for_diggle"></Table>
+				</join>
+				<Level name="county_id" column="county_id"
+					   nameColumn="county_name" uniqueMembers="true" table="base_area_for_diggle" />
+
+				<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />
+			</Hierarchy>
+
+		</Dimension>
+		<Dimension name="报名区县" foreignKey="county_id">
+			<Hierarchy hasAll="true" allMemberName="所有区县" primaryKey="county_id">
+				<Table name="base_area_for_diggle" />
+				<Level name="county_id" column="county_id" nameColumn="county_name"></Level>
+				<!--<Level name="id" column="id" nameColumn="name"
+					   uniqueMembers="true" table="base_school" />-->
+			</Hierarchy>
+		</Dimension>
+		<!-- 学校类别维 -->
+		<!--<Dimension name="学校性质" foreignKey="type">
+			<Hierarchy hasAll="true" allMemberName="所有公办民办学校" primaryKey="type"  >
+				<Table name="school_nature" />
+				<Level name="type" column="type"
+					   nameColumn="school_type_name" uniqueMembers="true"  />
+
+			</Hierarchy>
+		</Dimension>-->
+		<Dimension name="学校性质" foreignKey="id">
+			<Hierarchy hasAll="true" allMemberName="所有公办民办学校" primaryKey="id" primaryKeyTable="base_school" >
+				<join leftKey="type" rightKey="type">
+					<Table name="base_school" />
+					<Table name="school_nature"></Table>
+				</join>
+				<Level name="type" column="type"
+					   nameColumn="school_type_name" uniqueMembers="true" table="school_nature" />
+				<!--<Level name="id" column="id"
+					   nameColumn="name" uniqueMembers="true" table="base_school" />-->
+
+			</Hierarchy>
+		</Dimension>
+
+
+		<Dimension name="学校级别" foreignKey="id">
+			<Hierarchy hasAll="true" allMemberName="所有中小学校" primaryKey="id" primaryKeyTable="base_school">
+				<join leftKey="school_type" rightKey="school_type">
+					<Table name="base_school" />
+					<Table name="school_level"></Table>
+				</join>
+				<Level name="school_type" column="school_type"
+					   nameColumn="school_type_name" uniqueMembers="true" table="school_level" />
+				<!--<Level name="id" column="id"
+					   nameColumn="name" uniqueMembers="true" table="base_school" />-->
+
+			</Hierarchy>
+
+		</Dimension>
+
+		<!--<Dimension name="学校" foreignKey="id">
+			<Hierarchy hasAll="true" allMemberName="所有学校" primaryKey="id">
+				<Level name="name" column="name"/>
+
+			</Hierarchy>
+		</Dimension>-->
+		<Measure name="计划数" column="student_number"  aggregator="sum" datatype="Numeric" />
+		<Measure name="初中计划数" column="student_number2"  aggregator="sum"  />
+		<Measure name="直升生计划数" column="zss_number"  aggregator="sum"  />
+		<Measure name="配建生计划数" column="pjs_number"  aggregator="sum"  />
+	</Cube>
+
+
+	<VirtualCube name="register and enroll" enabled="true">
+		<CubeUsages>
+			<CubeUsage cubeName="register" ignoreUnrelatedDimensions="true"/>
+			<CubeUsage cubeName="enroll" ignoreUnrelatedDimensions="true"/>
+			<CubeUsage cubeName="plan" ignoreUnrelatedDimensions="true"/>
+		</CubeUsages>
+		<!--<VirtualCubeDimension name="区县"/>-->
+		<VirtualCubeDimension cubeName="register" name="报名区县"/>
+		<!--<VirtualCubeDimension cubeName="register" name="录取区县"/>-->
+		<VirtualCubeDimension cubeName="register" name="学生户籍类型"/>
+		<VirtualCubeDimension cubeName="register" name="学生民族"/>
+		<VirtualCubeDimension cubeName="register" name="学生性别"/>
+		<VirtualCubeDimension cubeName="register" name="学生类型"/>
+		<VirtualCubeDimension cubeName="register" name="政策优抚类型"/>
+
+		<VirtualCubeDimension cubeName="plan" name="报名区县"/>
+		<VirtualCubeDimension cubeName="plan" name="录取区县"/>
+		<VirtualCubeDimension cubeName="plan" name="学校性质"/>
+		<VirtualCubeDimension cubeName="plan" name="学校级别"/>
+		<!--<VirtualCubeDimension cubeName="plan" name="学校"/>-->
+
+		<VirtualCubeDimension cubeName="enroll" name="报名区县"/>
+		<VirtualCubeDimension cubeName="enroll" name="录取区县"/>
+		<VirtualCubeDimension cubeName="enroll" name="学生户籍类型"/>
+		<VirtualCubeDimension cubeName="enroll" name="学生民族"/>
+		<VirtualCubeDimension cubeName="enroll" name="学生性别"/>
+		<VirtualCubeDimension cubeName="enroll" name="学生类型"/>
+		<VirtualCubeDimension cubeName="enroll" name="学校性质"/>
+		<VirtualCubeDimension cubeName="enroll" name="学校级别"/>
+		<VirtualCubeDimension cubeName="enroll" name="政策优抚类型"/>
+
+		<VirtualCubeMeasure cubeName="enroll" name="[Measures].[录取人数]" />
+		<VirtualCubeMeasure cubeName="enroll" name="[Measures].[报名录取人数]" />
+		<VirtualCubeMeasure cubeName="register" name="[Measures].[报名人数]" />
+		<VirtualCubeMeasure  cubeName="plan"  name="[Measures].[计划数]" />
+		<VirtualCubeMeasure  cubeName="plan"  name="[Measures].[直升生计划数]"/>
+		<VirtualCubeMeasure  cubeName="plan"  name="[Measures].[配建生计划数]" />
+		<VirtualCubeMeasure  cubeName="plan"  name="[Measures].[初中计划数]" />
+		<CalculatedMember name="报名录取率" dimension="Measures">
+			<Formula>[Measures].[报名录取人数] / [Measures].[报名人数]</Formula>
+			<CalculatedMemberProperty name="FORMAT_STRING" value="0.00%"/>
+		</CalculatedMember>
+
+		<CalculatedMember name="区县实际录取率" dimension="Measures">
+			<Formula>[Measures].[录取人数] / [Measures].[报名人数]</Formula>
+			<CalculatedMemberProperty name="FORMAT_STRING" value="0.00%"/>
+		</CalculatedMember>
+		<CalculatedMember name="计划总数" dimension="Measures">
+			<Formula>[Measures].[计划数] + [Measures].[初中计划数] + [Measures].[直升生计划数] + [Measures].[配建生计划数]</Formula>
+
+		</CalculatedMember>
+		<CalculatedMember name="计划录取差" dimension="Measures">
+			<Formula>[Measures].[计划总数] - [Measures].[录取人数]</Formula>
+
+		</CalculatedMember>
+
+	</VirtualCube>
+</Schema>

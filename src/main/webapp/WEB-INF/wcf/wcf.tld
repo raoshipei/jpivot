@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+  <tlib-version>0.1</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>Xoplon Tags</short-name>
+  <uri>http://www.tonbeller.com/wcf</uri>
+  <display-name>Web Component Framework Tags</display-name>
+  <description/>
+
+  <tag>
+    <name>render</name>
+    <tag-class>com.tonbeller.wcf.component.RendererTag</tag-class>
+    <body-content>JSP</body-content>
+    <description/>
+    <attribute>
+      <name>ref</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>xslUri</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>xslCache</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>param</name>
+    <tag-class>com.tonbeller.wcf.component.RendererParameterTag</tag-class>
+    <body-content>tagdependent</body-content>
+    <description>stylesheet parameter for render tag</description>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>modelReference</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+
+  <tag>
+    <name>form</name>
+    <tag-class>com.tonbeller.wcf.form.FormComponentTag</tag-class>
+    <body-content>tagdependent</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>xmlUri</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>model</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>visible</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>table</name>
+    <tag-class>com.tonbeller.wcf.table.TableComponentTag</tag-class>
+    <body-content>tagdependent</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>model</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+
+  <tag>
+    <name>env</name>
+    <tag-class>com.tonbeller.wcf.component.EnvironmentTag</tag-class>
+    <body-content>JSP</body-content>
+    <description/>
+    <attribute>
+      <name>mode</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description>"print" or empty</description>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>toolbar</name>
+    <tag-class>com.tonbeller.wcf.toolbar.ToolBarTag</tag-class>
+    <body-content>JSP</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>separator</name>
+    <tag-class>com.tonbeller.wcf.toolbar.ToolSeparatorTag</tag-class>
+    <body-content>empty</body-content>
+    <description/>
+    <attribute>
+      <name>size</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>scriptbutton</name>
+    <tag-class>com.tonbeller.wcf.toolbar.ScriptButtonTag</tag-class>
+    <body-content>empty</body-content>
+    <description>reads its state from a beans boolean property</description>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>img</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>radioGroup</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>model</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>pushbutton</name>
+    <tag-class>com.tonbeller.wcf.toolbar.PushButtonTag</tag-class>
+    <body-content>empty</body-content>
+    <description>simple push- or radio button</description>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>img</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>pressed</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>radioGroup</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>formbutton</name>
+    <tag-class>com.tonbeller.wcf.toolbar.FormButtonTag</tag-class>
+    <body-content>empty</body-content>
+    <description>optionally validates or reverts the content of forms, then optionally forwards to another page</description>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>img</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>radioGroup</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>action</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description>either "revert" or "validate" (or empty)</description>
+    </attribute>
+    <attribute>
+      <name>forward</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description>path to the jsp to display if validation succeeds</description>
+    </attribute>
+  </tag>
+
+
+  <tag>
+    <name>tree</name>
+    <tag-class>com.tonbeller.wcf.tree.TreeComponentTag</tag-class>
+    <body-content>EMPTY</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>model</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>catedit</name>
+    <tag-class>com.tonbeller.wcf.catedit.CategoryEditorTag</tag-class>
+    <body-content>EMPTY</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>model</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>include</name>
+    <tag-class>com.tonbeller.wcf.depend.ForceIncludeTag</tag-class>
+    <body-content>EMPTY</body-content>
+    <description/>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>modifies</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>httpParam</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>initial</name>
+      <required>true</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+
+    <attribute>
+      <name>prefix</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+    <attribute>
+      <name>suffix</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <description/>
+    </attribute>
+
+  </tag>
+
+
+</taglib>

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://build/web/WEB-INF/lib/jakarta-regexp-1.2.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/javacup.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jaxen-full.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jstl.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/junit.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/log4j-1.2.8.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/mondrian.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/saxpath.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/standard.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jsf-api.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/avalon-framework-cvs-20020806.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/batik.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/fop.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-collections-3.1.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-dbcp-1.2.1.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-pool-1.2.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/saaj-api.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/tbutils-wcf.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/wcf.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-beanutils-1.6.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-digester-1.5.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-fileupload-1.0.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-logging-1.0.4.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/activation.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/dom4j.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/eigenbase-properties.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/eigenbase-resgen.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/eigenbase-xom.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jai_codec.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jai_core.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jcommon-1.0.0.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/jfreechart-1.0.0.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/mail.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/saaj-ri.jar" />
+    <libelement value="file://C:/Java/mysql-connector-java-3.1.12/mysql-connector-java-3.1.12-bin.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-math-1.0.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/commons-vfs.jar" />
+    <libelement value="file://build/web/WEB-INF/lib/groovy-all-1.0-jsr-03.jar" />
+    <varelement var="file://$TOMCAT_5_5$/common/lib/servlet-api.jar" value="TOMCAT_5_5/common/lib/servlet-api.jar" />
+    <varelement var="file://$TOMCAT_5_5$/common/lib/jsp-api.jar" value="TOMCAT_5_5/common/lib/jsp-api.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-bridge-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-bridge-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-common-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-common-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-core-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-core-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-format-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-format-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-portlet-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-portlet-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portals-bridges-common-0.2.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portals-bridges-common-0.2.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-server-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portal-server-lib.jar" />
+    <varelement var="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portlet-api-lib.jar" value="JBOSS_4_0_2/server/default/deploy/jboss-portal.sar/lib/portlet-api-lib.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src/java" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/src/test" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="jakarta-regexp-1.2.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jakarta-regexp-1.2.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javacup.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/javacup.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jaxen-full.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jaxen-full.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jstl.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jstl.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="junit.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/junit.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library name="log4j-1.2.8.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/log4j-1.2.8.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mondrian.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/mondrian.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://build/src/mondrian-src.jar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="saxpath.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/saxpath.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="standard.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/standard.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsf-api.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jsf-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="avalon-framework-cvs-20020806.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/avalon-framework-cvs-20020806.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="batik.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/batik.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="fop.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/fop.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-collections-3.1.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-collections-3.1.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-dbcp-1.2.1.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-dbcp-1.2.1.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-pool-1.2.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-pool-1.2.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="saaj-api.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/saaj-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="tbutils-wcf.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/tbutils-wcf.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="wcf.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/wcf.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="servlet-api.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_5_5$/common/lib/servlet-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsp-api.jar">
+        <CLASSES>
+          <root url="file://$TOMCAT_5_5$/common/lib/jsp-api.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-bridge-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-bridge-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-common-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-common-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-core-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-core-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-format-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-format-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-portlet-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-portlet-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portals-bridges-common-0.2.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portals-bridges-common-0.2.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portal-server-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portal-server-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="portlet-api-lib.jar">
+        <CLASSES>
+          <root url="file://$JBOSS_4_0_2$/server/default/deploy/jboss-portal.sar/lib/portlet-api-lib.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-beanutils-1.6.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-beanutils-1.6.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-digester-1.5.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-digester-1.5.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-fileupload-1.0.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-fileupload-1.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.0.4.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-logging-1.0.4.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="activation.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/activation.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="dom4j.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/dom4j.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="eigenbase-properties.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/eigenbase-properties.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="eigenbase-resgen.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/eigenbase-resgen.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="eigenbase-xom.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/eigenbase-xom.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jai_codec.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jai_codec.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jai_core.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jai_core.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jcommon-1.0.0.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jcommon-1.0.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jfreechart-1.0.0.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/jfreechart-1.0.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mail.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/mail.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="saaj-ri.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/saaj-ri.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mysql-connector-java-3.1.12-bin.jar">
+        <CLASSES>
+          <root url="file://C:/Java/mysql-connector-java-3.1.12/mysql-connector-java-3.1.12-bin.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-math-1.0.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-math-1.0.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-vfs.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/commons-vfs.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="groovy-all-1.0-jsr-03.jar">
+        <CLASSES>
+          <root url="file://build/web/WEB-INF/lib/groovy-all-1.0-jsr-03.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="activation" level="project" />
+    <orderEntry type="library" name="wcf" level="project" />
+    <orderEntry type="library" name="activation (2)" level="project" />
+    <orderEntry type="library" name="mondrian" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.2.1-b03" level="project" />
+  </component>
+</module>

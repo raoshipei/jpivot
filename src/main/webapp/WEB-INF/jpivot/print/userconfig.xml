@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configuration>
+
+ <fonts>
+
+  <font metrics-file ="simhei.xml" kerning ="yes" embed-file ="SimHei-windows.ttf">
+
+   <font-triplet name ="SimHei" style ="normal" weight ="normal"/>
+
+   <font-triplet name ="SimHei" style ="normal" weight ="bold"/>
+
+   <font-triplet name ="SimHei" style ="italic" weight ="normal"/>
+
+   <font-triplet name ="SimHei" style ="italic" weight ="bold"/>
+
+  </font>
+
+ </fonts>
+
+</configuration>
